@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Введите любое целое не отрицательное число: ");
@@ -8,7 +10,12 @@ public class Main {
     }
 
     public static double avg(int num) {
-        //todo Дописать логику работы метода сюда. Метод main не трогаем!!!
-        return 0; //todo заменить 0 на корректный результат.
+        String input = String.valueOf (num);
+        double sum = 0;
+        for(int i = 0; i < input.length(); ){
+            sum += Integer.parseInt(String.valueOf(input.charAt(i)));
+            i++;
+        }//todo Дописать логику работы метода сюда. Метод main не трогаем!!!
+        return sum / input.length(); //todo заменить 0 на корректный результат.
     }
 }
